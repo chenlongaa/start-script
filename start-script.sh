@@ -1,4 +1,5 @@
 #!/bin/bash
+echo test > test.txt
 sudo apt update
 sudo apt install shadowsocks-libev
 #mkdir /etc/shadowsocks-libev
