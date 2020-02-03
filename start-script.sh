@@ -6,7 +6,7 @@ sudo apt install shadowsocks-libev
 sudo -s
 echo "{
     "server":"0.0.0.0",
-    "server_port":23333,
+    "server_port":51105,
     "local_address": "127.0.0.1",
     "local_port":1080,
     "password":"mypassword",
