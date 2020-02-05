@@ -1,5 +1,5 @@
 #!/bin/bash
-#å®‰è£…ä»£ç†ç¨‹åºä½¿ç”¨çš„è„šæœ¬
+#°²×°´úÀí³ÌÐòÊ¹ÓÃµÄ½Å±¾
 echo test > test.txt
 sudo apt update
 sudo apt install shadowsocks-libev
