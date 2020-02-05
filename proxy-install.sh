@@ -5,5 +5,5 @@ sudo apt update
 sudo apt -y install shadowsocks-libev
 #mkdir /etc/shadowsocks-libev
 sudo -s
-cp -f start-script/config.json /etc/shadowsocks-libev
+cp start-script/config.json /etc/shadowsocks-libev
 sudo systemctl start shadowsocks-libev
