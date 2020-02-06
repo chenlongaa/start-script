@@ -13,4 +13,5 @@ sudo systemctl restart shadowsocks-libev
 #°²×°v2ray
 wget https://install.direct/go.sh
 sudo bash go.sh
+sudo cp start-script/v2ray/config.json /etc/v2ray/config.json
 sudo systemctl start v2ray
