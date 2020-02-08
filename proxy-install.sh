@@ -29,3 +29,6 @@ sysctl net.ipv4.tcp_available_congestion_control
 sysctl net.ipv4.tcp_congestion_control
 #查看bbr是否已经启动
 lsmod | grep bbr
+
+#安装network monitor
+apt install nethogs
