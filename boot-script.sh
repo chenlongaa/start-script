@@ -1,4 +1,4 @@
 #!/bin/bash
-#启动时运行的脚本
+#鍚姩鏃惰繍琛岀殑鑴氭湰
 git clone https://github.com/chenlongabc/start-script.git
 sudo bash start-script/proxy-install.sh

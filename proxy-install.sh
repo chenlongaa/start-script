@@ -1,34 +1,34 @@
 #!/bin/bash
-#°²×°´úÀí³ÌĞòÊ¹ÓÃµÄ½Å±¾
-#°²×°shadowsocks
+#å®‰è£…ä»£ç†ç¨‹åºä½¿ç”¨çš„è„šæœ¬
+#å®‰è£…shadowsocks
 echo test > test.txt
 apt update
 apt -y install shadowsocks-libev
 #mkdir /etc/shadowsocks-libev
 cp start-script/shadowsocks-libev/config.json /etc/shadowsocks-libev
-#systemctl start shadowsocks-libev ²»ĞĞ
+#systemctl start shadowsocks-libev ä¸è¡Œ
 systemctl restart shadowsocks-libev
 
 
-#°²×°v2ray
+#å®‰è£…v2ray
 wget https://install.direct/go.sh
 bash go.sh
 cp start-script/v2ray/config.json /etc/v2ray/config.json
 systemctl start v2ray
 
-#ÅäÖÃbbr
-#¿ªÆôTCP BBR
+#é…ç½®bbr
+#å¼€å¯TCP BBR
 echo "net.core.default_qdisc=fq" >> /etc/sysctl.conf
 echo "net.ipv4.tcp_congestion_control=bbr" >> /etc/sysctl.conf
-#±£´æÉúĞ§£¬ÅäÖÃÄÚºË
+#ä¿å­˜ç”Ÿæ•ˆï¼Œé…ç½®å†…æ ¸
 sysctl   -p
-#²é¿´ÄÚºËÊÇ·ñÒÑ¿ªÆôBBR
-#¿´bbrÊÇ·ñ´¦ÓÚavailableÁĞ±íÖĞ
+#æŸ¥çœ‹å†…æ ¸æ˜¯å¦å·²å¼€å¯BBR
+#çœ‹bbræ˜¯å¦å¤„äºavailableåˆ—è¡¨ä¸­
 sysctl net.ipv4.tcp_available_congestion_control
-#²é¿´bbrÊÇ·ñÊÇ±»ÅäÖÃÓÃÓÚtcp congestion control
+#æŸ¥çœ‹bbræ˜¯å¦æ˜¯è¢«é…ç½®ç”¨äºtcp congestion control
 sysctl net.ipv4.tcp_congestion_control
-#²é¿´bbrÊÇ·ñÒÑ¾­Æô¶¯
+#æŸ¥çœ‹bbræ˜¯å¦å·²ç»å¯åŠ¨
 lsmod | grep bbr
 
-#°²×°network monitor
+#å®‰è£…network monitor
 apt install nethogs
