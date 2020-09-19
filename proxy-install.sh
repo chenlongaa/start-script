@@ -11,8 +11,10 @@ systemctl restart shadowsocks-libev
 
 
 #安装v2ray
-wget https://install.direct/go.sh
-bash go.sh
+apt install curl
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
+curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
+bash install-release.sh
 cp start-script/v2ray/config.json /etc/v2ray/config.json
 systemctl start v2ray
 
