@@ -11,7 +11,7 @@ systemctl restart shadowsocks-libev
 
 
 #安装v2ray
-apt install curl
+apt -y install curl
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
 bash install-release.sh
