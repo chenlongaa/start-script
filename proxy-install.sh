@@ -15,7 +15,7 @@ apt -y install curl
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-release.sh
 curl -O https://raw.githubusercontent.com/v2fly/fhs-install-v2ray/master/install-dat-release.sh
 bash install-release.sh
-cp start-script/v2ray/config.json /etc/v2ray/config.json
+cp start-script/v2ray/config.json /usr/local/etc/v2ray/config.json
 systemctl start v2ray
 
 #配置bbr
